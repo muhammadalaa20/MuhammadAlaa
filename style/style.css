@@ -1,149 +1,516 @@
-html,
-body {
+* {
   margin: 0;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  scroll-padding: 5rem;
 }
 
-nav {
+.blue {
+  color: blue;
+}
+
+.yellow {
+  color: yellow;
+}
+
+.red {
+  color: red;
+}
+
+.green {
+  color: green;
+}
+
+.black {
+  color: black;
+}
+
+.white {
+  color: white;
+}
+
+.orange {
+  color: orange;
+}
+
+.pink {
+  color: pink;
+}
+
+.purple {
+  color: purple;
+}
+
+img {
+  width: 300px;
+  height: 300px;
+}
+
+header {
   width: 100%;
   height: 70px;
+  margin-top: 2.5em;
+  margin-bottom: 2.5em;
+  padding-left: 2.5em;
+  padding-right: 2.5em;
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  justify-content: space-around;
-  background: #232323;
-  color: #ccc;
-  overflow: hidden;
 }
-
-.logo {
-  letter-spacing: 3px;
-}
-
-.nav {
-  display: flex;
-  justify-content: space-around;
-  width: 30%;
-}
-
-.nav-link {
-  list-style: none;
-  margin: 0;
-}
-
-.nav-link a {
-  color: #ccc;
-  text-decoration: none;
-  font-size: 1.2em;
-  margin: 0 5px;
-}
-
-.burger {
-  font-size: 1.2em;
+header .menu-btn {
   display: none;
 }
+header .logo {
+  font-size: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  cursor: pointer;
+}
+header .navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 50%;
+}
+header .navigation .nav-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+header .navigation .nav-links .nav-link {
+  height: 50px;
+  width: 146px;
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+header .navigation .nav-links .nav-link a {
+  height: 100%;
+  width: 146px;
+  font-size: 1.15rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: black;
+}
+header .navigation .nav-links .normal-link a:hover {
+  color: #07611b;
+  font-size: 1.5rem;
+}
+header .navigation .nav-links .contact a {
+  background-color: #000000;
+  color: #fff;
+  border-radius: 30px;
+  transition: all 0.25s ease;
+}
+header .navigation .nav-links .contact :hover {
+  background-color: #07611b;
+  color: #fff;
+}
 
-.home {
+main {
+  width: 100%;
+}
+main #home {
   width: 100%;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.home .home-left {
-  width: 50%;
+main #home .home {
+  width: 100%;
   height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+main #home .home .home-text {
+  width: 50%;
   display: flex;
   flex-direction: column;
+  gap: 1rem;
   align-items: center;
   justify-content: center;
-  padding: 0 2rem;
 }
-.home .home-right {
+main #home .home .home-text h1 {
+  font-size: 2rem;
+}
+main #home .home .home-text h1 span {
+  transition: all 0.5s ease;
+}
+main #home .home .home-text h1 span:hover {
+  font-size: 3rem;
+  color: #07611b;
+}
+main #home .home .home-text p {
+  width: 80%;
+  font-size: 1rem;
+}
+main #home .home .home-text .button-con {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+main #home .home .home-text .button-con .main-button {
+  width: 200px;
+  height: 50px;
+  border-radius: 30px;
+  border: 1px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  text-decoration: none;
+  background-color: #000;
+  border: hidden;
+  box-shadow: #000 1px 4px 5px;
+  transition: ease-out 0.7s;
+}
+main #home .home .home-text .button-con .main-button .button-text {
+  color: #fff;
+  font-size: 1.15rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 1rem;
+}
+main #home .home .home-text .button-con .main-button .button-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #07611b;
+}
+main #home .home .home-text .button-con:hover .main-button {
+  background-color: #07611b;
+}
+main #home .home .home-img {
   width: 50%;
   height: 100%;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
 }
-.home .home-right .fa-brands {
-  font-size: 5rem;
-  margin: 0 1rem;
+main #home .home .home-img img {
+  width: 100%;
+  height: 100%;
+  -webkit-clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+          clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  filter: grayscale(100%);
+  transition: all 0.25s ease;
+}
+main #home .home .home-img :hover {
+  filter: grayscale(0%);
 }
 
-.footer {
-  width: 100%;
-  height: 70px;
+#btnUp {
+  width: 55px;
+  height: 55px;
+  border-radius: 50px;
+  border: 1px solid #000;
+  outline: none;
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+  z-index: 99;
+  cursor: pointer;
+  background-color: #000;
+  padding: 1rem;
+  text-decoration: none;
+  display: none;
+  box-shadow: 1px 4px 15px rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #232323;
-  color: #ccc;
+  transition: all 0.25s ease;
 }
 
-@media screen and (max-width: 768px) {
-  body {
-    overflow-x: hidden;
-  }
-  .burger {
-    display: flex;
-    width: 30%;
-    align-items: center;
-    justify-content: center;
-  }
-  .logo {
-    width: 70%;
-    padding-left: 1rem;
-  }
-  .nav {
+#btnUp i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: white;
+}
+
+#btnUp:hover {
+  border: 1px solid #07611b;
+  background-color: #07611b;
+  box-shadow: 1px 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Media Query for low resolution mobiles */
+@media (max-width: 480px) {
+  body header {
+    flex-wrap: wrap;
     margin: 0;
-    background: #232323;
-    position: absolute;
-    right: -100%;
-    top: 70px;
-    width: 30%;
-    height: calc(100% - 70px);
-    flex-direction: column;
-    justify-content: space-around;
     padding: 0;
-    transition: all 400ms;
   }
-  .nav-link {
-    text-align: center;
-  }
-  .nav-active {
-    right: 0;
-    z-index: 99;
-  }
-  .blur {
-    filter: blur(2px);
-  }
-  .home {
+  body header .navigation {
     width: 100%;
-    height: 100vh;
+    height: 50vh;
+    z-index: 100;
+    display: none;
+  }
+  body header .navigation .nav-links {
+    display: flex;
+    flex-direction: column;
+    padding-right: 2.5em;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+  }
+  body header .navigation .nav-links .nav-link a {
+    background-color: #000000;
+    color: #fff;
+    border-radius: 30px;
+    transition: all 0.25s ease;
+  }
+  body header .navigation .nav-links .nav-link :hover {
+    background-color: #07611b;
+    color: #fff;
+  }
+  body header .navigation .nav-links .contact a:hover {
+    font-size: 1.5rem;
+  }
+  body header .menu-btn {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    padding-right: 1em;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  body header .logo {
+    width: 50%;
+    display: flex;
+    justify-content: start;
+    font-size: 1.5rem;
+    padding-left: 1em;
+  }
+  body header .active {
+    display: block;
+  }
+  body .blur {
+    filter: blur(4px);
+  }
+  body main #home {
+    height: auto;
+    padding-bottom: 1em;
+  }
+  body main #home .home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+  }
+  body main #home .home .home-text {
+    width: 100%;
+  }
+  body main #home .home .home-text .button-con {
+    align-items: center;
+    justify-content: center;
+  }
+  body main #home .home .home-text h1 {
+    font-size: 1rem;
+    margin-top: 1em;
+  }
+  body main #home .home .home-text h1 span {
+    font-size: 1.25rem;
+    color: #07611b;
+  }
+  body main #home .home .home-text h1 span:hover {
+    font-size: 1.25rem;
+  }
+  body main #home .home .home-text h1 .button-con a {
+    padding-bottom: 10em;
+  }
+  body main #home .home .home-img {
+    display: none;
+  }
+}
+/* Media Query for low resolution  Tablets, Ipads */
+@media (min-width: 481px) and (max-width: 767px) {
+  body header {
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+  }
+  body header .navigation {
+    width: 100%;
+    height: 50vh;
+    z-index: 100;
+    display: none;
+  }
+  body header .navigation .nav-links {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding-right: 2em;
+    gap: 1em;
   }
-  .home .home-left {
-    width: 100%;
+  body header .navigation .nav-links .nav-link a {
+    background-color: #000000;
+    color: #fff;
+    border-radius: 30px;
+    transition: all 0.25s ease;
+  }
+  body header .navigation .nav-links .nav-link :hover {
+    background-color: #07611b;
+    color: #fff;
+  }
+  body header .navigation .nav-links .contact a:hover {
+    font-size: 1.5rem;
+  }
+  body header .menu-btn {
     display: flex;
-    flex-direction: column;
+    justify-content: end;
     align-items: center;
-    justify-content: center;
-  }
-  .home .home-right {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-  }
-  .home .home-right .fa-brands {
+    width: 50%;
+    height: 100%;
+    padding-right: 1em;
     font-size: 2rem;
-    margin: 0 1rem;
+    cursor: pointer;
+  }
+  body header .logo {
+    width: 50%;
+    display: flex;
+    justify-content: start;
+    font-size: 2rem;
+    padding-left: 1em;
+  }
+  body header .active {
+    display: block;
+  }
+  body .blur {
+    filter: blur(4px);
+  }
+  body main #home {
+    height: auto;
+    padding-bottom: 1em;
+  }
+  body main #home .home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+  }
+  body main #home .home .home-text {
+    width: 100%;
+  }
+  body main #home .home .home-text .button-con {
+    align-items: center;
+    justify-content: center;
+  }
+  body main #home .home .home-text h1 {
+    font-size: 1rem;
+    margin-top: 1em;
+  }
+  body main #home .home .home-text h1 span {
+    font-size: 1.25rem;
+    color: #07611b;
+  }
+  body main #home .home .home-text h1 span:hover {
+    font-size: 1.25rem;
+  }
+  body main #home .home .home-text h1 .button-con a {
+    padding-bottom: 10em;
+  }
+  body main #home .home .home-img {
+    display: none;
+  }
+}
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 768px) and (max-width: 1024px) {
+  body header {
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+  }
+  body header .navigation {
+    width: 100%;
+    height: 50vh;
+    z-index: 100;
+    display: none;
+  }
+  body header .navigation .nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+  }
+  body header .navigation .nav-links .nav-link a {
+    background-color: #000000;
+    color: #fff;
+    border-radius: 30px;
+    transition: all 0.25s ease;
+  }
+  body header .navigation .nav-links .nav-link :hover {
+    background-color: #07611b;
+    color: #fff;
+  }
+  body header .navigation .nav-links .contact a:hover {
+    font-size: 1.5rem;
+  }
+  body header .menu-btn {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    padding-right: 2em;
+    font-size: 2.5rem;
+    cursor: pointer;
+  }
+  body header .logo {
+    width: 50%;
+    display: flex;
+    justify-content: start;
+    padding-left: 1.25em;
+  }
+  body header .active {
+    display: block;
+  }
+  body .blur {
+    filter: blur(4px);
+  }
+  body main #home .home .home-text h1 {
+    font-size: 1.5rem;
+  }
+  body main #home .home .home-text h1 span {
+    font-size: 1.5rem;
+  }
+  body main #home .home .home-text h1 span:hover {
+    font-size: 2rem;
+  }
+  body main #home .home .home-text p {
+    font-size: 0.75rem;
+  }
+}
+/* Media Query for Laptops and Desktops */
+@media (min-width: 1025px) and (max-width: 1280px) {
+  body header .logo {
+    font-size: 2.5rem;
+    width: 25%;
+  }
+  body header .navigation {
+    width: 75%;
   }
 }/*# sourceMappingURL=style.css.map */
